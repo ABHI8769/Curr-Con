@@ -1,4 +1,3 @@
-```markdown
 # CurrCon
 
 CurrCon is a simple currency converter React application that allows users to convert between different currencies. It utilizes React's useState hook for managing state and custom hooks for fetching currency information.
