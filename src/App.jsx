@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {InputBox} from './components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -27,13 +28,17 @@ function App() {
 
   return (
     <div
-        className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+        className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat m-0"
         style={{
             backgroundImage: `url('https://images.pexels.com/photos/19773878/pexels-photo-19773878/free-photo-of-dollar-among-pesos-from-argentina.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
         }}
     >
+        <div className=' max-w-md rounded-lg p-5 backdrop-blur-sm bg-white/30 text-3xl'
+        style={{color:'Black'}}>
+            CURRENCY CONVERTER
+        </div>
         <div className="w-full">
-            <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+            <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-15 backdrop-blur-sm bg-white/30 m-20">
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
@@ -76,6 +81,7 @@ function App() {
                 </form>
             </div>
         </div>
+        <Footer/>
     </div>
 );
 }
